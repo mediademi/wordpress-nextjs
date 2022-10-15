@@ -2,9 +2,9 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/post/',
+        source: '/post/:id',
         permanent: false,
-        destination: 'https://intclassmarketing.com/posts/',
+        destination: 'https://intclassmarketing.com/posts/:id',
       },
     ]
   }
