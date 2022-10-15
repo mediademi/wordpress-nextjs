@@ -7,6 +7,7 @@ module.exports = {
           {
             type: 'query',
             key: 'fbclid',
+            value: '123',
           },
         ],
         permanent: false,
