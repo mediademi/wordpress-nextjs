@@ -10,7 +10,7 @@ module.exports = {
           },
         ],
         permanent: false,
-        destination: 'https://intclassmarketing.com/posts/:path*',
+        destination: '/posts/:path*',
       },
     ]
   }
