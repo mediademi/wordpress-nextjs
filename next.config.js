@@ -2,7 +2,7 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/post/:path*',
+        source: '/post/:id',
         has: [
           {
             type: 'query',
@@ -10,7 +10,7 @@ module.exports = {
           },
         ],
         permanent: false,
-        destination: '/posts/:path*',
+        destination: 'https://intclassmarketing.com/posts/:id',
       },
     ]
   }
