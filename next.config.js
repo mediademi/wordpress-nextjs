@@ -8,13 +8,13 @@ module.exports = {
     redirectUrl: '/redirect'
   },
   webpack: (config) => {
-  // Add a server property to the config object
-  config.server = {
+  // Add a serverless property to the config object
+  config.serverless = {
     middleware: []
   };
 
   // Add a custom `RedirectFromFacebook` middleware to the server bundle
-  config.server.middleware.push('RedirectFromFacebook');
+  config.serverless.middleware.push('RedirectFromFacebook');
 
   // Return the modified config object
   return config;
