@@ -8,12 +8,17 @@ module.exports = {
     redirectUrl: '/redirect'
   },
   webpack: (config) => {
-    // Add a custom `RedirectFromFacebook` middleware to the server bundle
-    config.server.middleware.push('RedirectFromFacebook');
+  // Add a server property to the config object
+  config.server = {
+    middleware: []
+  };
 
-    // Return the modified config object
-    return config;
-  }
+  // Add a custom `RedirectFromFacebook` middleware to the server bundle
+  config.server.middleware.push('RedirectFromFacebook');
+
+  // Return the modified config object
+  return config;
+}
 };
 
 // Custom middleware function to redirect the user if they came from facebook.com
